@@ -7,13 +7,17 @@ import {HttpService} from "./http-service/http.service";
 import {MockBackend} from "@angular/http/testing";
 import { SimpleDirective } from './app-directive/simple.directive';
 import { ParameetrizeDirective } from './app-directive/parameetrize.directive';
+import { ExponentialPipe } from './custom-pipe/exponential.pipe';
+import { SearchPipe } from './custom-pipe/search.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpleDirective,
-    ParameetrizeDirective
+    ParameetrizeDirective,
+    ExponentialPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

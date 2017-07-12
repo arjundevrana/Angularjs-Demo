@@ -8,3 +8,16 @@
 <h1 [appSimple]="'green'"> hello demo</h1>
 <h1 [appSimple]="'orange'"> hello demo</h1>
 <h2 *appParameetrize="isHidden"> This is my custom structure directive</h2>
+<h2>Power Booster</h2>
+<p>Super power boost: {{2 | exponential: 10}}</p>
+<h2>Power Boost Calculator</h2>
+<div>Normal power: <input [(ngModel)]="power"></div>
+<div>Boost factor: <input [(ngModel)]="factor"></div>
+<p>
+  Super Hero Power: {{power | exponential: factor}}
+</p>
+<input type="text" (ngModel)="inputToSearch">
+
+<li *ngFor="let item of colorList; let i = index">
+  {{i}} {{item}}
+</li>
