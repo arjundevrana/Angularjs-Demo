@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from './http-service/http.service';
 import 'rxjs/Rx';
-import {SearchPipe} from "./custom-pipe/search.pipe";
+import * as My_constant from './constant';
+import {App} from "./constant/app";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,6 +18,8 @@ export class AppComponent implements OnInit {
   factor:any;
   inputToSearch:String;
   colorList=['GREEN','READ','YELLOW','BLACK','WHITE'];
+  version = My_constant.version;
+  userName = My_constant.userName;
 
 
 
