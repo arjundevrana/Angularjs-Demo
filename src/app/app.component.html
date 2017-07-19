@@ -84,6 +84,27 @@
         {{i}} {{item}}
       </li>
 
+
+
+      <div class="container parent-view">
+        <div class="">
+
+          <h3>Parent Component</h3>
+
+          <input type="text" class="form-control" value="{{ sampleData }}" [(ngModel)]='sampleData'>
+
+          <br>
+
+          <p>Data from child component : <b>{{ sampleChildData }}</b></p>
+          <hr>
+
+          <div class="child-view">
+            <app-child [parentData]="sampleData" (childData)='handleEvent($event)'>app-child-view</app-child>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

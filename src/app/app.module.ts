@@ -9,6 +9,8 @@ import { SimpleDirective } from './app-directive/simple.directive';
 import { ParameetrizeDirective } from './app-directive/parameetrize.directive';
 import { ExponentialPipe } from './custom-pipe/exponential.pipe';
 import { SearchPipe } from './custom-pipe/search.pipe';
+import { ChildComponent } from './child-component/child/child.component';
+import { MyNewDirectiveDirective } from './my-new-directive.directive';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { SearchPipe } from './custom-pipe/search.pipe';
     SimpleDirective,
     ParameetrizeDirective,
     ExponentialPipe,
-    SearchPipe
+    SearchPipe,
+    ChildComponent,
+    MyNewDirectiveDirective
   ],
   imports: [
     BrowserModule,

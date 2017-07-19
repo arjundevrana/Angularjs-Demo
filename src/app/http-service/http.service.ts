@@ -17,4 +17,11 @@ export class HttpService {
     return this.http.post('http://validate.jsontest.com',prams, headers ).map(res => res.json())
 
   }
+  success(message: string, keepAfterNavigationChange = false) {
+       console.log("Success");
+  }
+
+  error(message: string, keepAfterNavigationChange = false) {
+    console.log("Error");
+  }
 }

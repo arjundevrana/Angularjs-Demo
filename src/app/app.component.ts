@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpService} from './http-service/http.service';
 import 'rxjs/Rx';
 import * as My_constant from './constant';
-import {App} from "./constant/app";
+import {ChildComponent} from "./child-component/child/child.component";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -41,6 +41,12 @@ export class AppComponent implements OnInit {
         () => console.log("finished"));
       console.log(this.getData);
   }
+  sampleData : string ="some parent Data";
 
+  sampleChildData : string = '';
+
+  public handleEvent(childData:any){
+    this.sampleChildData = childData;
+  }
 
 }
